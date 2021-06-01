@@ -1,0 +1,99 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:grodudes/components/QuantityToggle.dart';
+import 'package:grodudes/components/StyledProductPrice.dart';
+import 'package:grodudes/helper/ImageFetcher.dart';
+import 'package:grodudes/models/Product.dart';
+import 'package:grodudes/pages/ProductDetailsPage.dart';
+
+class ProductListTile extends StatelessWidget {
+  final Product item;
+  ProductListTile(this.item);
+
+  @override
+  Widget build(BuildContext context) {
+    if (this.item == null || this.item.data['id'] == null) {
+      return SizedBox(height: 0);
+    }
+    return GestureDetector(
+      onTap: () {
+        WidgetsBinding.instance.focusManager.primaryFocus?.unfocus();
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (context) => ProductDetailsPage(item),
+          ),
+        );
+      },
+      child: Column(
+        children: [
+          Container(
+            height: 100,
+            padding: EdgeInsets.symmetric(vertical: 8),
+            margin: EdgeInsets.all(8.0),
+            color: Colors.white,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                SizedBox(
+                  height: 80,
+                  width: 80,
+                  child: ImageFetcher.getImage(item.data['images'][0]['src']),
+                ),
+                Padding(padding: EdgeInsets.only(left: 10)),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        item.data['name'],
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      item.data['purchasable'] != null &&
+                              item.data['purchasable']
+                          ? Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 2),
+                              child: item.data['in_stock'] == true
+                                  ? StyledProductPrice(
+                                      this.item.data['price'],
+                                      this.item.data['regular_price'],
+                                    )
+                                  : Text(
+                                      'Out of Stock',
+                                      style: TextStyle(color: Colors.red[600]),
+                                    ),
+                            )
+                          : Padding(
+                              padding: const EdgeInsets.only(top: 4),
+                              child: Text(
+                                'Currently Not Purchasable',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(color: Colors.red[600]),
+                              ),
+                            ),
+                    ],
+                  ),
+                ),
+                item.data['purchasable'] != null && item.data['purchasable']
+                    ? item.data['in_stock'] == true
+                        ? QuantityToggle(item)
+                        : SizedBox(width: 25)
+                    : SizedBox(width: 26),
+              ],
+            ),
+          ),
+          Container(
+            child: Divider(
+              color: Colors.grey,
+              height: 15,
+              thickness: 0.2,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

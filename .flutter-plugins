@@ -1,0 +1,23 @@
+# This is a generated file; do not edit or check into version control.
+flutter_secure_storage=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-4.2.0/
+import_js_library=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/import_js_library-1.0.2/
+path_provider=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.1/
+path_provider_linux=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.0.0/
+path_provider_macos=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.0/
+path_provider_windows=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.1/
+shared_preferences=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.5/
+shared_preferences_linux=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-2.0.0/
+shared_preferences_macos=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-2.0.0/
+shared_preferences_web=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-2.0.0/
+shared_preferences_windows=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-2.0.0/
+sqflite=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-2.0.0+3/
+url_launcher=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.0.3/
+url_launcher_linux=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_linux-2.0.0/
+url_launcher_macos=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-2.0.0/
+url_launcher_web=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-2.0.0/
+url_launcher_windows=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_windows-2.0.0/
+video_player=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/video_player-1.0.1/
+video_player_web=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_web-0.1.4+1/
+wakelock=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/wakelock-0.2.1+1/
+wakelock_web=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/wakelock_web-0.1.0+3/
+webview_flutter=/Users/anshuman/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter-1.0.7/
